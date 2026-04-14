@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="@{/tour/create}" th:object="${tourDto}" method="post">
+        <label>Mã tour</label>
+        <input type="text" th:field="*{tourCode}">
+        <p style="color:red" th:errors="*{tourCode}"></p>
+        <br>
+        <label>Giá người lớn</label>
+        <input type="number" th:field="*{priceForAdult}">
+        <p style="color: red" th:errors="*{priceForAdult}"></p>
+        <br>
+        <label>Giá trẻ em</label>
+        <input type="number" th:field="*{priceForChild}">
+        <p style="color: red" th:errors="*{priceForChild}"></p>
+        <br>
+        <label>Ngày khởi hành</label>
+        <input type="date" th:field="*{startDate}">
+        <p style="color: red" th:errors="*{startDate}"></p>
+        <br>
+        <label>Ngày kết thúc</label>
+        <input type="date" th:field="*{endDate}">
+        <p style="color: red" th:errors="*{endDate}"></p>
+        <br>
+        <button type="submit">Tạo</button>
+    </form>
+</body>
+</html>
+

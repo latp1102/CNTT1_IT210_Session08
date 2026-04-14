@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/hr/add-employee}" th:object="${employee}" method="post">
+    <label>Age</label>
+    <input type="number" th:field="*{age}">
+    <p style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></p>
+    <button type="submit">Cập nhật</button>
+</form>
+</body>
+</html>
