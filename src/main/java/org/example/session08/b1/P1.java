@@ -5,7 +5,7 @@ public class P1 {
     // @NotNull chỉ kiểm tra giá trị ≠ null, nên dùng @NotBlank
     // nhập Space → String vẫn tồn tại -> validation PASS -> lưu DB
 
-    // lỗi 2 Không chặn được request từ Postman gây lỗi 50
+    // lỗi 2 Không chặn được request từ Postman gây lỗi 500
     // public ResponseEntity<String> updateAddress(@RequestBody AddressDto addressDto)
     // thiếu @valid , Bean Validation ko hoạt động đc
 }
